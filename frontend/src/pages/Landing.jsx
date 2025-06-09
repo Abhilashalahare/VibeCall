@@ -20,7 +20,7 @@ const LandingPage = () => {
                         router("/home")
                     }}>Join as Guest</p>
                     <p onClick={() => {
-                        router("/home")
+                        router("/auth")
 
                     }}>Register</p>
                     <div onClick={() => {

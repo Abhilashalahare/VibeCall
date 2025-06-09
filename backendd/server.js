@@ -19,7 +19,8 @@ const io = connectToScoket(server)
 
 
 app.use(cors({
-  origin: '*',
+  origin: 'https://vibecall-frontend.onrender.com',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true
 }));
 
