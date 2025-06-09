@@ -18,15 +18,15 @@ const server = createServer(app)
 const io = connectToScoket(server)
 
 
-const allowedOrigins = ['https://vibecall-frontend.onrender.com']
+const allowedOrigins = ['http://localhost:8000']
 
 app.use(cors({
   origin: allowedOrigins,
   credentials: true,  // only if you're using cookies or auth headers
 }))
 
-// Allow preflight requests for all routes
-app.options('*', cors())
+// // Allow preflight requests for all routes
+// app.options('*', cors())
 
 
 app.use(express.json({limit:"40kb"}))
