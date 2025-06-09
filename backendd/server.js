@@ -18,15 +18,11 @@ const server = createServer(app)
 const io = connectToScoket(server)
 
 
-const allowedOrigins = ['http://localhost:5173']
-
 app.use(cors({
-  origin: allowedOrigins,
-  credentials: true,  // only if you're using cookies or auth headers
-}))
+  origin: '*',
+  credentials: true
+}));
 
-// // Allow preflight requests for all routes
-// app.options('*', cors())
 
 
 app.use(express.json({limit:"40kb"}))
